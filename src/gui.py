@@ -1,5 +1,5 @@
 # Imports externos
-import os
+from os import remove
 import base64
 from tkinter import *
 from tkinter import ttk
@@ -88,7 +88,7 @@ iconfile.write(icondata)
 iconfile.close()
 root.wm_iconbitmap(tempFile)
 ## Delete the tempfile
-os.remove(tempFile)
+remove(tempFile)
 
 # Adicione margem para a janela
 root.geometry("+10+10")
