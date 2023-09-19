@@ -54,7 +54,8 @@ class Estimate:
         '''
         Calculates the probable end date of a given set of values.
         '''
-        return (self.mi_value() + self.div_padrao())
+        return (truncate((self.mi_value() + self.div_padrao()), 2))
+    
 def set_estimate_values(data:Estimate, optimistic:float, nominal:float, pessimistic:float) -> None:
     data.set_optimistic(optimistic)
     data.set_nominal(nominal)
